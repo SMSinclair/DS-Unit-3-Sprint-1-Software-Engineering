@@ -1,4 +1,4 @@
-import report_nulls as *
-import split_dates as *
+from report_nulls import *
+from split_dates import *
 
 name="lambdatasinclair"
