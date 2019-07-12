@@ -45,8 +45,12 @@ class AcmeReportTests(unittest.TestCase):
     def test_legal_names(self):
         """Checks that the generated names for a default batch of products are
         all valid possible names to generate."""
-        # I ran out of time before I could write this method.
-        pass
+        product_list = generate_products()
+        for prod in product_list:
+            noun = prod.name.split(" ")[1]
+            adjective = prod.name.split(" ")[0]
+            self.assertIn(noun, NOUNS)
+            self.assertIn(adjective, ADJECTIVES)
 
 if __name__ == '__main__':
     unittest.main()
